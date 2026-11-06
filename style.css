@@ -1,0 +1,224 @@
+/* ===== Colour themes (one per page) ===== */
+/* Default / Home = blue */
+:root {
+    --main: #2c3e50;     /* header, footer, headings */
+    --dark: #3d566e;     /* nav boxes */
+    --accent: #f1c40f;   /* hover colour */
+    --light: #eef2f6;    /* page background and light boxes */
+}
+
+body.home {
+    --main: #2c3e50;
+    --dark: #3d566e;
+    --accent: #f1c40f;
+    --light: #eef2f6;
+}
+
+body.experience {
+    --main: #1e6b52;
+    --dark: #2f8a6d;
+    --accent: #f5b041;
+    --light: #edf7f3;
+}
+
+body.contacts {
+    --main: #6a3d9a;
+    --dark: #8557b5;
+    --accent: #f4d03f;
+    --light: #f4eefa;
+}
+
+body.hobbies {
+    --main: #c0562b;
+    --dark: #d8703f;
+    --accent: #2c3e50;
+    --light: #fbf0ea;
+}
+
+/* ===== General ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light);
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--main);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== Navigation (separate boxes) ===== */
+nav {
+    background-color: var(--main);
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: var(--dark);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: #222222;
+}
+
+/* ===== Main content ===== */
+.container {
+    background-color: white;
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 5px solid var(--main);
+}
+
+h2 {
+    color: var(--main);
+}
+
+hr {
+    border: none;
+    border-top: 2px solid var(--light);
+    margin: 20px 0;
+}
+
+a {
+    color: var(--main);
+}
+
+/* ===== Home page photo ===== */
+.profile-photo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid var(--main);
+}
+
+/* ===== Experience table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid var(--main);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--main);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light);
+}
+
+/* ===== Hobbies ===== */
+.hobby-box {
+    background-color: var(--light);
+    border-left: 5px solid var(--main);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.hobby-box h3 {
+    margin: 0 0 8px 0;
+    color: var(--main);
+}
+
+.hobby-box p {
+    margin: 0;
+}
+
+/* ===== Contacts page (forms and lists) ===== */
+ul {
+    padding-left: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 14px 0;
+    border: 1px solid #b0b7be;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--main);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent);
+    color: #222222;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--main);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 6px 0;
+    }
+
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+}
